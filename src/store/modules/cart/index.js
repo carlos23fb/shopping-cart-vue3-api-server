@@ -1,16 +1,32 @@
-const state = {};
+import axios from "axios";
 
-const mutations = {};
+const state = {
+    cartItems:[]
+}
 
-const actions = {};
+const mutations = {
+    UPDATE_CART_ITEMS(state, payload){
+        state.cartItems = payload
+    }
+}
 
-const getters = {};
+const actions = {
+    getCartItems({commit}){
+        axios.get('/api/cart').then(response =>{
+            commit('UPDATE_CART_ITEMS', response.data)
+        })
+    }
+}
+
+const getters = {
+    cartItems: state => state.cartItems
+}
 
 const cartModule = {
     state,
     mutations,
     actions,
     getters
-}
+};
 
 export default cartModule;

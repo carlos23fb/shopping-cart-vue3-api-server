@@ -5,21 +5,21 @@ const state = {
 };
 
 const mutations = {
-    UPDATE_PRODUCT_ITEMS(state, payload){
+    UPDATE_PRODUCT_ITEMS(state, payload) {
         state.productItems = payload
     }
 };
 
 const actions = {
-    getProductItems({commit}){
-        axios.get('/api/products').then(response =>{
+    async getProductItems({commit}) {
+        await axios.get('/api/products').then(response => {
             commit('UPDATE_PRODUCT_ITEMS', response.data)
         });
     }
 };
 
 const getters = {
-    productItems : state => state.productItems
+    productItems: state => state.productItems
 };
 
 const productModule = {

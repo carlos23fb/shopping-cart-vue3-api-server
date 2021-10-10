@@ -16,14 +16,14 @@
 </template>
 
 <script>
-
 import {mapGetters} from 'vuex'
+
 import ProductListItem from './ProductListItem'
 
 export default {
   name: 'ProductList',
   computed: {
-    ...mapGetters(['productItems'])
+      ...mapGetters(['productItems'])
   },
   created() {
     this.$store.dispatch("getProductItems")

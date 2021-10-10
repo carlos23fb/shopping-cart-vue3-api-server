@@ -7,21 +7,14 @@
         "quantity": 2
     },
     {
-        "id": 100,
-        "title": "A New Cart Item",
-        "description": "Adding a new cart item",
-        "price": 99,
-        "quantity": 1
-    },
-    {
-        "id": 101,
+        "id": 102,
         "title": "Another cart item",
         "description": "Adding a new cart item",
         "price": 10000,
-        "quantity": 1
+        "quantity": 3
     },
     {
-        "id": 102,
+        "id": 101,
         "title": "Another cart item",
         "description": "Adding a new cart item",
         "price": 10000,
