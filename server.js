@@ -54,7 +54,7 @@ app.post('/cart', (req, res) => {
   });
 });
 
-app.delete('/cart/delete', (req, res) => {
+app.post('/cart/delete', (req, res) => {
   fs.readFile(CART_DATA_FILE, (err, data) => {
     let cartProducts = JSON.parse(data);
     cartProducts.map((cartProduct) => {
