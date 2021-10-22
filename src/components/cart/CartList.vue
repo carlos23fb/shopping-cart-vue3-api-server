@@ -34,14 +34,17 @@ export default {
   components: {
     CartListItem
   },
-  created() {
-    this.$store.dispatch('getCartItems')
-  },
   computed: {
-    ...mapGetters(['cartItems', 'cartQuantity', 'cartTotal'])
+    // ...mapGetters(['cartItems', 'cartQuantity', 'cartTotal'])
+    ...mapGetters({
+      cartItems: "cartItems",
+      cartQuantity: "cartQuantity",
+      cartTotal: "cartTotal"
+    })
   },
   methods:{
     ...mapActions({
+      getCartItems: "getCartItems",
       removeAllCartItems: "removeAllCartItems"
     })
   }

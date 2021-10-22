@@ -27,7 +27,7 @@ export default {
   props: ['cartItem'],
   methods:{
     ...mapActions({
-      addCartItem: "addCartItem",
+      addCartItem: "getCartItems",
       removeCartItem: "removeCartItem"
     })
   }
