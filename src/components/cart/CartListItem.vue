@@ -9,12 +9,12 @@
             <span class="cart-item--price
                 has-text-primary
                 has-text-weight-bold">
-              {{cartItem.price}}$ each
+              {{ cartItem.price }}$ each
             </span>
       <span class="cart-item--quantity
                 has-text-grey
                 is-pulled-right">
-              Quantity: {{cartItem.quantity}}
+              Quantity: {{ cartItem.quantity }}
             </span>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
   props: ['cartItem'],
   methods:{
     ...mapActions({
-      addCartItem: "getCartItems",
+      addCartItem: "addCartItem",
       removeCartItem: "removeCartItem"
     })
   }
